@@ -1,5 +1,9 @@
 name: Echo context data
-on: [ "issues" ]
+on: 
+    issues:
+        types: [opened, edited, labeled]
+    label:
+        types: [created, deleted]
 jobs:
     Echo:
         runs-on: ubuntu-latest
