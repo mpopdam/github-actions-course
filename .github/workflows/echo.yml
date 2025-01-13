@@ -1,0 +1,9 @@
+name: Echo context data
+on: [ "issues" ]
+jobs:
+    Echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echoing context information
+              run: echo "${{ github.event }}"
+        
