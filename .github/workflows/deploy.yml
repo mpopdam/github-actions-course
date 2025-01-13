@@ -1,0 +1,14 @@
+name: Deploy
+on: [ "push" ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linting project
+        run: npm lint
+
+      - name: Testing project
+        run: npm test
+    
+      - name: Deploying project
+        run: npm build
